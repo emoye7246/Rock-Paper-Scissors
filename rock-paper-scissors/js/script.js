@@ -30,7 +30,7 @@ function play(playerSelection, computerSelection) {
 
         console.log(choose);
         console.log(choices);
-        console.log("You Lose");
+        console.log("You Win");
     }
 
    else if (choose == "Scissors" && choices == "Paper") {
@@ -67,7 +67,7 @@ function play(playerSelection, computerSelection) {
         console.log(choices);
         console.log("Its A Tie");
     } else {
-        console.log("Please choose Rock Paper or Scissors");
+        console.log("Please choose Rock Paper or Scissors PS: Remember to capitlize the first letter of your choice");
     }
 
 
