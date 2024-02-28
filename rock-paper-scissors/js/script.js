@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    const choice = ["Rock", "Paper", "Scissors"];
+    const choice = ["Rock", "Paper", "scissors"];
     const choices = choice[Math.floor(Math.random() * choice.length)];
 
     // console.log(choices);
@@ -11,14 +11,14 @@ function play(playerSelection, computerSelection) {
     const Rock = "Rock";
     const Paper = "Paper";
     const Scissors = "Scissors";
-    const choose = window.prompt("Do you choose Rock Paper or Scissors");
-    const choice = ["Rock", "Paper", "Scissors"];
+    const choose = window.prompt("Do you choose Rock Paper or Scissors").toLowerCase();
+    const choice = ["rock", "paper", "scissors"];
     const choices = choice[Math.floor(Math.random() * choice.length)];
 
-    playerSelection = choose;
+      playerSelection = choose;
     computerSelection = choices;
 
-    if (choose == "Rock" && choices == "Paper"  ) {
+    if (choose == "rock" && choices == "paper"  ) {
 
         console.log(choose);
         console.log(choices);
@@ -26,35 +26,35 @@ function play(playerSelection, computerSelection) {
 
     } 
 
-    else if (choose == "Rock" && choices == "Scissors") {
+    else if (choose == "rock" && choices == "scissors") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Win");
     }
 
-   else if (choose == "Scissors" && choices == "Paper") {
+   else if (choose == "scissors" && choices == "paper") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Win");
     }
 
-   else if (choose == "Scissors" && choices == "Rock") {
+   else if (choose == "scissors" && choices == "rock") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Lose");
     }
 
-   else if (choose == "Paper" && choices == "Rock") {
+   else if (choose == "paper" && choices == "rock") {
        
         console.log(choose);
         console.log(choices);
         console.log("You Win");
     }
 
-   else if (choose == "Paper" && choices == "Scissors") {
+   else if (choose == "paper" && choices == "scissors") {
 
         console.log(choose);
         console.log(choices);
@@ -66,9 +66,12 @@ function play(playerSelection, computerSelection) {
         console.log(choose);
         console.log(choices);
         console.log("Its A Tie");
-    } else {
+    } 
+    else {
         console.log("Please choose Rock Paper or Scissors PS: Remember to capitlize the first letter of your choice");
     }
+
+    return ("Press up to play again");
 
 
 
@@ -85,4 +88,5 @@ function play(playerSelection, computerSelection) {
     
     
 }
-play();
+console.log(play());
+
