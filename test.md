@@ -1,11 +1,11 @@
-// function getComputerChoice(){
-//     const choice = ["Rock", "Paper", "scissors"];
-//     const choices = choice[Math.floor(Math.random() * choice.length)];
+function getComputerChoice(){
+    const choice = ["Rock", "Paper", "scissors"];
+    const choices = choice[Math.floor(Math.random() * choice.length)];
 
-//     // console.log(choices);
+    // console.log(choices);
 
-// }
-// // getComputerChoice();
+}
+// getComputerChoice();
 
 function play(playerSelection, computerSelection) {
     const Rock = "Rock";
@@ -96,9 +96,9 @@ function play(playerSelection, computerSelection) {
     
 }
 
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(play(playerSelection, computerSelection));
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(play(playerSelection, computerSelection));
 
 function playGame() {
     console.log("Hello World");
