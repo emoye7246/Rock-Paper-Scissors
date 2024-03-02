@@ -1,11 +1,19 @@
-// function getComputerChoice(){
-//     const choice = ["Rock", "Paper", "scissors"];
-//     const choices = choice[Math.floor(Math.random() * choice.length)];
+let playerOneScore = 0;
+let computerScore = 0;
 
-//     // console.log(choices);
 
-// }
-// // getComputerChoice();
+function getComputerChoice() {
+    const choice = ["Rock", "Paper", "scissors"];
+    const choices = choice[Math.floor(Math.random() * choice.length)];
+    const compChoice = choices;
+    console.log(choices);
+    return choices;
+
+    console.log(choices);
+
+}
+// getComputerChoice();
+
 
 function play(playerSelection, computerSelection) {
     const Rock = "Rock";
@@ -18,56 +26,75 @@ function play(playerSelection, computerSelection) {
       playerSelection = choose;
     computerSelection = choices;
 
-    if (choose == "rock" && choices == "paper"  ) {
+    if (choose === "rock" && choices === "paper"  ) {
 
         console.log(choose);
         console.log(choices);
         console.log("You Win");
+        ++playerOneScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
         return ("Press up to play again");
 
     } 
 
-    else if (choose == "rock" && choices == "scissors") {
+    else if (choose === "rock" && choices === "scissors") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Win");
+        ++playerOneScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
         return ("Press up to play again");
     }
 
-   else if (choose == "scissors" && choices == "paper") {
+   else if (choose === "scissors" && choices === "paper") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Win");
+        ++playerOneScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
        return ("Press up to play again");
     }
 
-   else if (choose == "scissors" && choices == "rock") {
+   else if (choose === "scissors" && choices === "rock") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Lose");
+        ++computerScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
+        
        return ("Press up to play again");
     }
 
-   else if (choose == "paper" && choices == "rock") {
+   else if (choose === "paper" && choices === "rock") {
        
         console.log(choose);
         console.log(choices);
         console.log("You Win");
+        ++playerOneScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
        return ("Press up to play again");
     }
 
-   else if (choose == "paper" && choices == "scissors") {
+   else if (choose === "paper" && choices === "scissors") {
 
         console.log(choose);
         console.log(choices);
         console.log("You Lose");
+        ++computerScore;
+        console.log(playerOneScore);
+        console.log(computerScore);
        return ("Press up to play again");
     }
 
-   else if (choose == choices) {
+   else if (choose === choices) {
 
         console.log(choose);
         console.log(choices);
