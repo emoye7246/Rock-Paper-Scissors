@@ -34,7 +34,6 @@ function play(playerSelection, computerSelection) {
         ++playerOneScore;
         console.log(playerOneScore);
         console.log(computerScore);
-        return ("Press up to play again");
 
     } 
 
@@ -46,7 +45,6 @@ function play(playerSelection, computerSelection) {
         ++playerOneScore;
         console.log(playerOneScore);
         console.log(computerScore);
-        return ("Press up to play again");
     }
 
    else if (choose === "scissors" && choices === "paper") {
@@ -57,7 +55,6 @@ function play(playerSelection, computerSelection) {
         ++playerOneScore;
         console.log(playerOneScore);
         console.log(computerScore);
-       return ("Press up to play again");
     }
 
    else if (choose === "scissors" && choices === "rock") {
@@ -69,7 +66,6 @@ function play(playerSelection, computerSelection) {
         console.log(playerOneScore);
         console.log(computerScore);
         
-       return ("Press up to play again");
     }
 
    else if (choose === "paper" && choices === "rock") {
@@ -80,7 +76,6 @@ function play(playerSelection, computerSelection) {
         ++playerOneScore;
         console.log(playerOneScore);
         console.log(computerScore);
-       return ("Press up to play again");
     }
 
    else if (choose === "paper" && choices === "scissors") {
@@ -91,7 +86,6 @@ function play(playerSelection, computerSelection) {
         ++computerScore;
         console.log(playerOneScore);
         console.log(computerScore);
-       return ("Press up to play again");
     }
 
    else if (choose === choices) {
@@ -99,10 +93,24 @@ function play(playerSelection, computerSelection) {
         console.log(choose);
         console.log(choices);
         console.log("Its A Tie");
-       return ("Press up to play again");
     } 
     else {
         console.log("Please choose Rock Paper or Scissors");
+    }
+
+    if (playerOneScore === 5) {
+        console.log("Congratualtions you beat a computer");
+        console.log(playerOneScore = 0);
+        console.log(computerScore = 0);
+        return (play());
+
+    } else if (computerScore === 5) {
+
+        console.log("How did you let a computer beat you");
+        console.log(playerOneScore = 0);
+        console.log(computerScore = 0);
+        return (play());
+
     }
 
     return ("Press up to play again");
