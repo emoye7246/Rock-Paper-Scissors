@@ -99,14 +99,16 @@ function play(playerSelection, computerSelection) {
     }
 
     if (playerOneScore === 5) {
-        console.log("Congratualtions you beat a computer");
+        alert("Congratulations you beat a computer");
+        console.log("Score resets");
         console.log(playerOneScore = 0);
         console.log(computerScore = 0);
         return (play());
 
     } else if (computerScore === 5) {
 
-        console.log("How did you let a computer beat you");
+        alert("How did you let a computer beat you");
+        console.log("Score Resets");
         console.log(playerOneScore = 0);
         console.log(computerScore = 0);
         return (play());
