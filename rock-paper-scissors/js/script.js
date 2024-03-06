@@ -138,5 +138,6 @@ function play(playerSelection, computerSelection) {
 // console.log(play(playerSelection, computerSelection));
 
 function playGame() {
-    console.log("Hello World");
+    play();
+
 }
