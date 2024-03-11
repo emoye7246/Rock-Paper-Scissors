@@ -11,8 +11,8 @@ div.textContent = `Player ${playerScore}`;
 container.appendChild(div);
 
 const computer = document.createElement("div");
-computer.classList.add("#second");
-computer.textContent = `Computer ${computerScore}`
+computer.classList.add("second");
+computer.textContent = `Computer ${computerScore}`;
 container.appendChild(computer);
 
 
@@ -101,7 +101,7 @@ function playGame(playerSelection, computerSeclection) {
 
 function keepScore() {
     div.textContent = `Player ${playerScore}`;
-    div.textContent = `Computer ${computerScore}`
+    computer.textContent = `Computer ${computerScore}`
 
     
 }
