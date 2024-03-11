@@ -1,6 +1,21 @@
 const choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
+const options = document.getElementById("#options");
+const playerDisplay = document.getElementById("#playerDisplay");
+
+const container = document.querySelector("#container");
+const div = document.createElement("div");
+div.classList.add("Paragraph");
+div.textContent = `Player ${playerScore}`;
+container.appendChild(div);
+
+const computer = document.createElement("div");
+computer.classList.add("#second");
+computer.textContent = `Computer ${computerScore}`
+container.appendChild(computer);
+
+
 
 function getComputerChoice() {
   const  getComputerChoice = choices[Math.floor(Math.random() * choices.length)].toLowerCase();
@@ -84,9 +99,19 @@ function playGame(playerSelection, computerSeclection) {
 
 }
 
+function keepScore() {
+    div.textContent = `Player ${playerScore}`;
+    div.textContent = `Computer ${computerScore}`
+
+    
+}
+
     function game(playerSelection, computerSeclection) {
         for (i = 0; i < 5; i++) {
+            let playerScore = 0;
+            let computerScore = 0;
             console.log(playGame());
+            keepScore();
 
         
         }
@@ -101,4 +126,5 @@ function playGame(playerSelection, computerSeclection) {
         console.log(computerScore = 0);
         return ("Press up to play again");
     }
+    
   
