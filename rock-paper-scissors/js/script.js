@@ -15,15 +15,7 @@ computer.classList.add("second");
 computer.textContent = `Computer ${computerScore}`;
 container.appendChild(computer);
 
-const rock = document.getElementById("Rock");
-rock.addEventListener("click", rockButton);
-
-const paper = document.getElementById("Paper");
-paper.addEventListener("click", paperButton);
-
-const scissors = document.getElementById("Scissors");
-scissors.addEventListener("click", scissorsButton);
-
+const li = document.querySelector("#player");
 
 
 
@@ -34,58 +26,32 @@ scissors.addEventListener("click", scissorsButton);
 
 function getComputerChoice() {
   const  getComputerChoice = choices[Math.floor(Math.random() * choices.length)].toLowerCase();
-    console.log(getComputerChoice);
     return (getComputerChoice);
 }
-function rockButton() {
-
-    const computerDisplay = document.querySelector("#computer");
-    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
 
 
-    const li = document.querySelector("#player");
-    li.textContent = "Player Chooses Rock";
+function playGame(playerSelection) {
 
-
-}
-
-function paperButton () {
-
-    const computerDisplay = document.querySelector("#computer");
-    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
-    const li = document.querySelector("#player");
-    li.textContent = "Player Chooses Paper";
-   
-}
-
-function scissorsButton () {
-
-    const computerDisplay = document.querySelector("#computer");
-    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
-    
-    const li = document.querySelector("#player");
-    li.textContent = "Player Chooses Scissors";
-}
-
-function playGame(playerSelection, computerSeclection) {
-    
-    playerSelection = window.prompt("Please choose rock paper or scissors").toLowerCase();
-    computerSeclection = getComputerChoice();
+     computerSeclection = getComputerChoice();
+    let result = "";
 
     if (playerSelection === "rock" && computerSeclection === "scissors") {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Win");
+        result = "You Win";
+        console.log(result);
         ++playerScore;
         console.log(playerScore);
         console.log(computerScore);
+       
     }
     else if (playerSelection === "paper" && computerSeclection === "rock") {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Win");
+        result = "You Win";
+        console.log(result);
         ++playerScore;
         console.log(playerScore);
         console.log(computerScore);
@@ -94,7 +60,8 @@ function playGame(playerSelection, computerSeclection) {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Win");
+        result = "You Win";
+        console.log(result);
         ++playerScore;
         console.log(playerScore);
         console.log(computerScore);
@@ -103,7 +70,8 @@ function playGame(playerSelection, computerSeclection) {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Lose");
+        result = "You Lose";
+        console.log(result);
         ++computerScore;
         console.log(playerScore);
         console.log(computerScore);
@@ -112,7 +80,8 @@ function playGame(playerSelection, computerSeclection) {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Lose");
+        result = "You Lose";
+        console.log(result);
         ++computerScore;
         console.log(playerScore);
         console.log(computerScore);
@@ -121,7 +90,8 @@ function playGame(playerSelection, computerSeclection) {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("You Lose"); 
+        result = "You Lose";
+        console.log(result);
         ++computerScore;
         console.log(playerScore);
         console.log(computerScore);
@@ -130,7 +100,8 @@ function playGame(playerSelection, computerSeclection) {
 
         console.log(playerSelection);
         console.log(computerSeclection);
-        console.log("Its a tie");
+        result = "Its a Tie";
+        console.log(result);
         console.log(playerScore);
         console.log(computerScore);
     }
@@ -141,6 +112,18 @@ function playGame(playerSelection, computerSeclection) {
     }
     console.log("Press Up to play again");
 
+    if (playerScore === 5 ) {
+        console.log("PlayerOne Wins");
+        console.log("Game Over");
+        console.log(computerScore = 0);
+        console.log(playerScore = 0);
+    } else if (computerScore === 5) {
+        console.log("Computer Wins");
+        console.log("Game Over");
+        console.log(computerScore = 0);
+        console.log(playerScore = 0);
+    }
+
 }
 
 function keepScore() {
@@ -150,17 +133,24 @@ function keepScore() {
     
 }
 
-    function game(playerSelection, computerSeclection) {
+    function game(playerSelection) {
         const winner = document.querySelector("#winner");
+    
+
 
         for (i = 0; i < 5; i++) {
             let playerScore = 0;
             let computerScore = 0;
-            console.log(playGame());
+            console.log(playGame(playerSelection));
             keepScore();
-
+            if (result === "You Win") {
+                ++playerScore
+            } else if (result === "You Lose") {
+                ++computerScore
+            }
         
         }
+
         if (playerScore > computerScore) {
             winner.textContent= `PlayerOne Wins`;
         }
