@@ -11,13 +11,30 @@ h1 {
     display: flex;
     justify-content: center;
 }
-
+/* Play Game Button */
 #container {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
 }
 
+#container button {
+
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-color: red;
+}
+
+#container button:hover {
+    transition: all 0.3s ease 0s;
+    color: aqua;
+}
+
+
+/* Play game button ends here */
 #choices {
     display: flex;
     gap: 10px;

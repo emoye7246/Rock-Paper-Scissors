@@ -5,17 +5,17 @@ const options = document.getElementById("#options");
 const playerDisplay = document.getElementById("#playerDisplay");
 
 // Player one score ui i know this is considered bad code based off top im aware just let me be me for now
-const container = document.querySelector("#container");
+const container = document.querySelector("#score");
 const div = document.createElement("div");
 div.classList.add("Paragraph");
-div.textContent = `Player ${playerScore}`;
-container.appendChild(div);
+div.textContent = `Player Score: ${playerScore}`;
+score.appendChild(div);
 
 // Computer Score Ui
 const computer = document.createElement("div");
 computer.classList.add("second");
-computer.textContent = `Computer ${computerScore}`;
-container.appendChild(computer);
+computer.textContent = `Computer Score: ${computerScore}`;
+score.appendChild(computer);
 
 // Computer and playerSelection  results Ui
 const li = document.querySelector("#player");
@@ -165,7 +165,7 @@ function playGame(playerSelection) {
 }
 
 function keepScore() {
-    div.textContent = `Player ${playerScore}`;
-    computer.textContent = `Computer ${computerScore}`;
+    div.textContent = `Player Score: ${playerScore}`;
+    computer.textContent = `Computer Score: ${computerScore}`;
 
 }
