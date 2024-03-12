@@ -15,12 +15,56 @@ computer.classList.add("second");
 computer.textContent = `Computer ${computerScore}`;
 container.appendChild(computer);
 
+const rock = document.getElementById("Rock");
+rock.addEventListener("click", rockButton);
+
+const paper = document.getElementById("Paper");
+paper.addEventListener("click", paperButton);
+
+const scissors = document.getElementById("Scissors");
+scissors.addEventListener("click", scissorsButton);
+
+
+
+
+
+
+
 
 
 function getComputerChoice() {
   const  getComputerChoice = choices[Math.floor(Math.random() * choices.length)].toLowerCase();
     console.log(getComputerChoice);
     return (getComputerChoice);
+}
+function rockButton() {
+
+    const computerDisplay = document.querySelector("#computer");
+    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
+
+
+    const li = document.querySelector("#player");
+    li.textContent = "Player Chooses Rock";
+
+
+}
+
+function paperButton () {
+
+    const computerDisplay = document.querySelector("#computer");
+    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
+    const li = document.querySelector("#player");
+    li.textContent = "Player Chooses Paper";
+   
+}
+
+function scissorsButton () {
+
+    const computerDisplay = document.querySelector("#computer");
+    computerDisplay.textContent = `Computer chooses ${getComputerChoice()}`
+    
+    const li = document.querySelector("#player");
+    li.textContent = "Player Chooses Scissors";
 }
 
 function playGame(playerSelection, computerSeclection) {
@@ -107,6 +151,8 @@ function keepScore() {
 }
 
     function game(playerSelection, computerSeclection) {
+        const winner = document.querySelector("#winner");
+
         for (i = 0; i < 5; i++) {
             let playerScore = 0;
             let computerScore = 0;
@@ -116,10 +162,10 @@ function keepScore() {
         
         }
         if (playerScore > computerScore) {
-            console.log("Player Wins");
+            winner.textContent= `PlayerOne Wins`;
         }
         else if (playerScore < computerScore) {
-            console.log ("Computer Wins");
+            winner.textContent = `Computer Wins`;
         }
         console.log("Score resets");
         console.log(playerScore = 0);

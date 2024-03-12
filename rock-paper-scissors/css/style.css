@@ -23,3 +23,16 @@ h1 {
     gap: 10px;
     
 }
+
+#scoreDisplay {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#options {
+    display: flex;
+    gap: 20px;
+}
