@@ -3,12 +3,13 @@ let playerScore = 0;
 let computerScore = 0;
 const options = document.getElementById("#options");
 const playerDisplay = document.getElementById("#playerDisplay");
+const playerName = window.prompt("Enter your Name");
 
 // Player one score ui i know this is considered bad code based off top im aware just let me be me for now
 const container = document.querySelector("#score");
 const div = document.createElement("div");
 div.classList.add("Paragraph");
-div.textContent = `Player Score: ${playerScore}`;
+div.textContent = `${playerName}: ${playerScore}`;
 score.appendChild(div);
 
 // Computer Score Ui
@@ -38,7 +39,7 @@ function getComputerChoice() {
 
 function playGame(playerSelection) {
 
-   
+    console.log(playerName);
     computerSeclection = getComputerChoice();
      
     let result = "";
@@ -46,7 +47,7 @@ function playGame(playerSelection) {
     if (playerSelection === "rock" && computerSeclection === "scissors") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Win";
@@ -60,7 +61,7 @@ function playGame(playerSelection) {
     else if (playerSelection === "paper" && computerSeclection === "rock") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Win";
@@ -74,7 +75,7 @@ function playGame(playerSelection) {
     else if (playerSelection === "scissors" && computerSeclection === "paper") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Win";
@@ -88,7 +89,7 @@ function playGame(playerSelection) {
     else if (playerSelection === "rock" && computerSeclection === "paper") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Lose";
@@ -102,7 +103,7 @@ function playGame(playerSelection) {
     else if (playerSelection === "paper" && computerSeclection === "scissors") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Lose";
@@ -116,7 +117,7 @@ function playGame(playerSelection) {
     else if (playerSelection === "scissors" && computerSeclection === "rock") {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent = `${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "You Lose";
@@ -130,7 +131,7 @@ function playGame(playerSelection) {
     else if (playerSelection === computerSeclection) {
 
         console.log(playerSelection);
-        li.textContent = `PlayerOne chooses ${playerSelection}`;
+        li.textContent =`${playerName} chooses : ${playerSelection}`;
         console.log(computerSeclection);
         opp.textContent = `Computer chooses ${computerSeclection}`
         result = "Its a Tie";
@@ -151,7 +152,7 @@ function playGame(playerSelection) {
     if (playerScore === 3 ) {
         console.log("PlayerOne Wins");
         console.log("Game Over");
-        winner.textContent = `PlayerOne Wins`;
+        winner.textContent = `${playerName} Wins`;
         console.log(computerScore = 0);
         console.log(playerScore = 0);
     } else if (computerScore === 3) {
@@ -165,7 +166,7 @@ function playGame(playerSelection) {
 }
 
 function keepScore() {
-    div.textContent = `Player Score: ${playerScore}`;
+    div.textContent = `${playerName} ${playerScore}`;
     computer.textContent = `Computer Score: ${computerScore}`;
 
 }
